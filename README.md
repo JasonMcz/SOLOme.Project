@@ -9,8 +9,8 @@
 
 As a 5-year LOL veteran, I've witnessed how game dynamic has changed over the years and how its focus has shifted more and more towards the teamwork aspect of the game. In the current meta, one good team fight with a 3-4 men push can easily yield a victory before the early game phase even ends. Just seeing all my older league friends slowly departing this game because of this shift and also my love for playing solo games made me take on this project for this year’s API challenge.
 
-<a href="http://i.imgur.com/q4u8Rg3.png"><img src="http://i.imgur.com/q4u8Rg3.png" align="left" width="60%" ></a>
-<a href="http://i.imgur.com/osSSdFp.png"><img src="http://i.imgur.com/osSSdFp.png" align="left" width="60%" ></a>
+<a href="http://i.imgur.com/q4u8Rg3.png"><img src="http://i.imgur.com/q4u8Rg3.png" align="center" width="70%" ></a></p>
+<a href="http://i.imgur.com/osSSdFp.png"><img src="http://i.imgur.com/osSSdFp.png" align="center" width="70%" ></a>
 
 # Introduction
 

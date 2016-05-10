@@ -1,0 +1,20 @@
+# OS
+
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Project
+
+.idea
+.sass-cache
+.temp
+
+_gh-pages
+
+bower_components
+coverage
+dist/demo
+logs
+node_modules
+vendor

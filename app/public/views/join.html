@@ -1,0 +1,46 @@
+<div class="container" ng-init = "setStep('3');checkStep('3')">
+  <div class="col-md-5">
+      <div class="col-md-12" style = "text-align:center">
+        <span>Player 1</span>
+      </div>
+      <div class="summonerDisplaySmall">
+          <div class="col-md-5">
+              <img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/{{players[0].info.profileIconId}}.png">
+          </div>
+          <div class="col-md-7">
+              <name>{{players[0].info.name}}</name> | NA | {{players[0].ranked.tier}}-{{players[0].ranked.entries[0].division}}
+              <span>Summoner ID: {{players[0].info.id}}</span>
+              <span>Summoner Level: lvl.{{players[0].info.summonerLevel}}</span>
+              <span>Last Avtive : {{players[0].info.revisionDate | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+          </div>
+      </div>
+
+      <div class="col-md-12" style = "text-align:center">
+        <span>Player 2</span>
+      </div>
+      <div class="summonerDisplaySmall">
+          <div class="col-md-5">
+              <img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/{{players[1].info.profileIconId}}.png" ng-show = "!!players[1].info.profileIconId">
+              <img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/1.png" ng-show = "!players[1].info.profileIconId" style = "-webkit-filter: grayscale(100%);filter: grayscale(100%);">
+          </div>
+          <div class="col-md-7" ng-show = "!!players[1].info.profileIconId">
+              <name>{{players[1].info.name}}</name>| NA | {{players[1].ranked.tier}}-{{players[1].ranked.entries[0].division}}
+              <span>Summoner ID: {{players[1].info.id}}</span>
+              <span>Summoner Level: lvl.{{players[1].info.summonerLevel}}</span>
+              <span>Last Avtive : {{players[1].info.revisionDate | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+          </div>
+          <div class="col-md-7" ng-show = "!players[1].info.profileIconId" style = "text-align:center;vertical-align:middle">
+              <i class="fa fa-circle-o-notch fa-spin fa-fw fa-4x margin-bottom" style = "margin-top:12%;-webkit-filter: grayscale(100%);filter: grayscale(100%)"></i>
+          </div>
+      </div>
+  </div>
+
+  <div class="col-md-7">
+      <div class = "createDisplay">
+        <div class = "col-md-12" style = "margin-top:5%;">1.Link for this game is: http://www.solome.lol/#games/{{games.active_game.game_id}}</div>
+        <div class = "col-md-12">2.Join a custom game</div>
+        <div class = "col-md-12">3.This room will be closing down in </div>
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "agenda": "^0.8.1",
+    "angular-animate": "^1.5.5",
+    "angular-loading-bar": "^0.9.0",
+    "angular-local-storage": "^0.2.7",
+    "angular-route": "^1.5.5",
+    "body-parser": "^1.13.3",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "~2.3.3",
+    "express": "~4.13.1",
+    "mongoose": "^4.4.14",
+    "morgan": "~1.6.1",
+    "ng-notify": "^0.7.1",
+    "node-rest-client": "1.8.0",
+    "q": "^1.4.1",
+    "querystring": "0.2.0",
+    "serve-favicon": "~2.3.0"
+  }
+}

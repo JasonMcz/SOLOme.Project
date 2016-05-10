@@ -1,0 +1,38 @@
+<div class = "col-md-12" style = "text-align:center;vertical-align:middle" ng-init = "setStep('1')">
+  <div class="welcomeButtonWrap">
+      <button type="submit" class="btn-large btn-large-primary" ng-click="joinGame()">
+        <i class="fa fa-user-plus" aria-hidden="true"></i>
+          Create 1v1 Game
+      </button>
+      <button class="btn-large btn-large-primary" ng-click="matchPlayer()">
+        <i class="fa fa-circle-o-notch fa-spin fa-fw margin-bottom"></i>
+           Match With Player!
+      </button>
+  </div>
+</div>
+
+<div class = "col-md-12" style = "text-align:center;vertical-align:middle">
+  <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>MMR</th>
+          <th>Summoner I</th>
+          <th>VS</th>
+          <th>Summoner II</th>
+          <th>MMR</th>
+          <th>Time</th>
+      </thead>
+      <tbody ng-repeat="game in allGames | orderBy: '-create_time' | limitTo: 8">
+        <tr>
+          <td>{{game.game_mode}}</td>
+          <td>{{game.ratings[0].participant1 | isempty}}</td>
+          <td>{{game.participant1_name}}</td>
+          <td><i class="fa fa-trophy fa-2x" aria-hidden="true" style = "color:#FF9C00"></i></td>
+          <td>{{game.participant2_name | isempty}}</td>
+          <td>{{game.ratings[1].participant2 | isempty}}</td>
+          <td am-time-ago="game.create_time"> ago</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

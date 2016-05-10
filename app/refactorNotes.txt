@@ -1,0 +1,40 @@
+@Tue May 03 2016 23:44:36 GMT-0400 (EDT)
+@https://docs.google.com/document/d/1-0s_PeCV8rt1APAIoA1kvnwqq62WJcH5_InlQdR3XQI/edit?usp=sharing
+
+'After a day of traveling and meetings in NYC, finally settled down after dinner and started doing some thinking
+over the code I've been rushing for the past few days. After giving a serious round of consideration, I've came to
+conclusion that I need to refactor these code.'
+
+'The following is my thought process:'
+
+
+'Functions by users'
+
+[game related functions]
+-create a game        // to create a solo game, with the 'status' open
+-get a game           // to get a current game, with the 'status' open
+  --join a game       // to join a current game knowing the game_id
+-match a game         // to get matched with someone who's currently in a game with the 'status' open
+-get past games       // to get past games, with options to show opened games, in process games, and completed games
+
+[summoner related functions]
+-get summoner         // to get specific user data
+-verify summoner      // to verify summoner runes page
+  --create summoner   // register summoner on the server for MMR purpose
+-get summoners        // to get all summoners, can be sorted by MMR, win rate and etc.
+
+
+The actions map directly to several routes, which are described as follows:
+
+[DONE!] POST /game/create        - create a new game
+[DONE!] GET  /game/:game_id      - get one game using game id
+[DONE!] POST /game/:game_id/join         - join one game given game id
+POST /game/match                 - get matched with someone who's currently in a game with the 'status' open and no participant2
+[DONE!] GET  /games              - return a list of games and associated meta data
+
+[DONE!] GET  /summoner/:summoner_id     - return an individual summoner with associated comments
+[DONE!] /summoner/create                - create new summoner
+POST /summoners                         - return all summoners, can be filtered/sorted by MMR ranking, win rate and etc.
+
+[DONE!]POST /public/summoner/data              - return an individual summoner with associated account & ranked status
+[DONE!]POST /public/summoner/verify            - return a boolean value that verifies summoner if rune page has changed

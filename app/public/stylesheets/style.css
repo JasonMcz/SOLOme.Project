@@ -1,0 +1,557 @@
+
+
+/*angular ngcloak*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/* line 2, ../RiotKit/scss/globals/typography/_mixin.scss */
+
+html {
+    font-size: 62.5%;
+}
+
+/* line 6, ../RiotKit/scss/globals/typography/_mixin.scss */
+
+html body {
+    padding: 100px 2.5% 0px 2.5%;
+    font-size: 1.5em;
+    font-family: "Gill Sans W04", GillSans, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    line-height: 1.4em;
+    color: #FF9C00;
+    background: #101010;
+}
+a {
+    color: #00B7FF;
+}
+
+/* start 'enter' transition on main view */
+main.ng-enter {
+    /* transition on enter for .5s */
+    transition: 1s;
+
+    /* start with opacity 0 (invisible) */
+    opacity: 0;
+}
+
+/* end 'enter' transition on main view */
+main.ng-enter-active {
+    /* end with opacity 1 (fade in) */
+    opacity: 1;
+}
+
+.logo {
+  text-align:center;
+  margin-top:-5%;
+  margin-bottom:3%;
+}
+/*top bar css*/
+.topbar {
+  width:90%;
+  position:fixed;
+  top:0;
+  background: rgba(0, 0, 0, 0.9);
+  color:#B0B0B0;
+}
+
+/*welcome page */
+
+.welcomeButtonWrap {
+    display: inline-block;
+    margin-top: 5%;
+}
+.welcomeButtonWrap btn-large {
+    margin-top: 5px;
+}
+
+/* summoner wrapper*/
+
+.summonerWrapper {
+    padding: 15px;
+    /*border-radius: 5px;*/
+    width: 80%;
+    text-align: center;
+    background-color: #000000;
+    border: 1px solid #515151;
+}
+
+/* summoner form*/
+
+.summonerWrapper input {
+    margin-top: 5px;
+    height: 40px;
+    width: 75%;
+    font-size: 1.5em;
+    margin-left: 12.5% !important;
+    margin-right: 12.5% !important;
+    border: none;
+    border-bottom: 3px solid #FF9C00 !important;
+    border-radius: none !important;
+}
+.summonerWrapper button {
+    margin-top: 5px;
+    width: auto;
+    font-size: 1.00em;
+}
+.summonerButtonWrap {
+    display: inline-block;
+    width: 100%;
+    /*margin-left: 0 auto !important;*/
+    /*margin-right: 0 auto !important;*/
+}
+.summonerVS {
+    text-align: center;
+    vertical-align: middle;
+}
+.summonerVS span {
+    width: 100%;
+    margin-top: 50%;
+    font-size: 9em;
+    display: inline-block;
+    color: #FF9C00;
+}
+.summonerDisplay {
+    /*height:auto;*/
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 0.8em;
+    display: inline-block;
+    /*border: 2px solid darkgrey;*/
+    /*border-radius: 5px;*/
+    background-color: #000000;
+    border: 1px solid #515151;
+}
+.summonerDisplay span {
+    /*height:auto;*/
+    /*padding: 1px !important;*/
+    /*margin-top: 1px !important;*/
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    color: #fff;
+    /*border-bottom: 1px solid grey;*/
+}
+.summonerDisplay elo {
+    /*height:auto;*/
+    /*padding: 1px !important;*/
+    margin-top: 2%;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    color: #fff;
+    font-size: 1.7em;
+    border-color: #f6c653 #bd6a23 #b6631f #e8ab4a;
+    /*background: #d79922 50% -846px;*/
+}
+
+.summonerDisplay img {
+    /*height:auto;*/
+    border: 3.5px solid #FF9C00;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    padding: 1px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    /*border-bottom: 1px solid grey;*/
+}
+
+.summonerDisplaySmall {
+  /*height:auto;*/
+  margin-bottom: 40px;
+  width: 100%;
+  font-size: 0.8em;
+  display: inline-block;
+  /*border: 2px solid darkgrey;*/
+  /*border-radius: 5px;*/
+  background-color: #000000;
+  border: 1px solid #515151;
+}
+
+.summonerDisplaySmall name{
+  margin-top: 5%;
+  font-size: 1.7em;
+  display: inline-block;
+  text-align: left;
+}
+
+.summonerDisplaySmall span{
+    /*height:auto;*/
+    padding: 1px;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    color: #fff;
+    /*border-bottom: 1px solid grey;*/
+}
+
+
+.summonerDisplaySmall img {
+    /*height:auto;*/
+    border: 3.5px solid #FF9C00;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    padding: 1px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    /*border-bottom: 1px solid grey;*/
+}
+
+.summonerName {
+    margin-top: 7%;
+    font-size: 2.8em;
+    display: inline-block;
+    text-align: left;
+}
+.summonerDisplayFillerGreen {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 136px;
+    padding: 1px 1px 1px 1px;
+    border: 1px green;
+    /*border-radius: 5px;*/
+    text-align: center;
+    vertical-align: middle !important;
+    display: inline-block;
+    background: #E4831B;
+    color: white;
+}
+.summonerDisplayFillerRed {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 136px;
+    padding: 1px 1px 1px 1px;
+    border: 1px green;
+    /*border-radius: 5px;*/
+    text-align: center;
+    vertical-align: middle !important;
+    display: inline-block;
+    background: #931708;
+    color: white;
+}
+
+/*steps section*/
+.step {
+    /*border-bottom: 1px solid #FF9C00;*/
+    padding-top: 2px;
+    display: block;
+    text-align: center;
+    font-size: 1.3em;
+    color: grey;
+    font-family: "Gill Sans W04", GillSans, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.step:hover {
+  padding-top: 2px;
+  display: block;
+  color: #FF9C00;
+  text-align: center;
+  font-size: 1.3em;
+  font-family: "Gill Sans W04", GillSans, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  cursor:pointer
+}
+
+.stepCurrent {
+    /*border-bottom: 1px solid #FF9C00;*/
+    padding-top: 2px;
+    display: block;
+    color: #222222;
+    background: #FF9C00;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "Gill Sans W04", GillSans, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: bold;
+}
+
+.stepCurrent:hover {
+  cursor:pointer;
+  color: #eeeeee !important;
+}
+
+/*create game section*/
+
+.createDisplay {
+  background-color: #000000;
+  border: 1px solid #515151;
+  min-height:350px;
+  height: 75%;
+  display: block;
+}
+
+/* line 36, ../RiotKit/scss/widgets/button-large/_mixin.scss */
+.startButton {
+  height:136px;
+  font-size: 1.75em;
+  padding-top: 10px 5px 10px 5px!important;
+}
+
+.btn-large-primary, .btn-large-primary:visited {
+    color: #222222;
+    border-color: #f6c653 #bd6a23 #b6631f #e8ab4a;
+    background: #d79922 50% -846px;
+}
+
+/* line 41, ../RiotKit/scss/widgets/button-large/_mixin.scss */
+
+.btn-large-primary:hover {
+    color: #222222;
+    border-color: #fdeaba #bf712c #b66521 #edbd6e;
+    background-position: 50% -878px;
+}
+
+/* line 46, ../RiotKit/scss/widgets/button-large/_mixin.scss */
+
+.btn-large-primary:active {
+    color: #222222;
+    border-color: #e1b03d #7f3517 #772d16 #c17f30;
+    background-position: 50% -911px;
+}
+
+/* line 3, ../RiotKit/scss/widgets/button-large/_mixin.scss */
+
+.btn-large, .btn-large:visited {
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 3px;
+    width: auto;
+    font-family: "Gill Sans W04", GillSans, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 15px 4px 15px;
+    display: inline-block;
+    text-align: center;
+    /* i18n-fonts : button large font */
+}
+
+/* ======= Footer ======= */
+
+.footer {
+    /*background: #253340;*/
+    color: #fff;
+    padding-top: 0px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    z-index: 20;
+}
+.footer p {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+.footer .btn-cta, .footer a.btn-cta {
+    padding: 9px 10px;
+}
+.footer .footer-col.links .fa {
+    margin-right: 5px;
+}
+.footer .footer-col.links li {
+    margin-bottom: 10px;
+}
+.footer .footer-col.connect .social {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.footer .footer-col.connect .social li {
+    margin-right: 10px;
+}
+.footer .footer-col.connect .social li a .fa {
+    color: #b3b3b3;
+    font-size: 22px;
+}
+.footer .footer-col.connect .social li a:hover .fa {
+    color: #497cb1;
+}
+.footer .footer-col.connect .btn-cta-primary {
+    background: #5d80a1;
+    border-color: #5d80a1;
+}
+.footer .footer-col.connect .btn-cta-primary:hover {
+    background: #4a6781;
+    border-color: #4a6781;
+}
+.footer .footer-col .title {
+    color: #fff;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    -webkit-opacity: 0.9;
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+}
+.footer .footer-col p {
+    color: #fff;
+}
+.footer .footer-col a {
+    color: #6d8dab;
+}
+.footer .footer-col a:hover {
+    color: #8da6bd;
+}
+.footer .footer-col .navbar-form {
+    padding-left: 0;
+    padding-right: 0;
+}
+.footer .footer-col .navbar-form .form-control {
+    -webkit-opacity: 0.9;
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+}
+.footer .footer-col .navbar-form .form-control:focus {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+.footer .has-divider {
+    border-top: 1px solid #2b3b4a;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer .download .download-list li {
+    margin-bottom: 15px;
+}
+.footer .download .download-list li .btn-ghost {
+    text-align: left;
+    -webkit-opacity: 0.6;
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    width: 230px;
+}
+.footer .download .download-list li .btn-ghost:hover {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+.footer .contact p {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+.footer .contact p a {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+.footer .contact .fa {
+    margin-right: 10px;
+    font-size: 20px;
+}
+.footer .contact .email .fa {
+    font-size: 16px;
+}
+.footer .bottom-bar {
+    background: #000000;
+    color: #b3b3b3;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.footer .bottom-bar .copyright {
+    line-height: 1.6;
+}
+
+/*#noGameWarning {
+  margin-top: 500px;
+}*/
+
+.overlay {
+    position: fixed;
+    left: 25%;
+    top: 17.5%;
+    padding: 20px;
+    border: 2px solid #FF9C00;
+    background-color: #000000;
+    width: 50%;
+    height: 65%;
+    z-index: 1050;
+}
+.fade {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    background-color: black;
+    -moz-opacity: 0.6;
+    opacity: .60;
+    filter: alpha(opacity=60);
+    width: 100%;
+    height: 100%;
+    z-index: 1049;
+}
+
+.custom-modal.ng-enter {
+  transition: opacity 2s ease-out;
+  opacity: 0;
+}
+.custom-modal.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.custom-modal.ng-leave {
+  transition: opacity 2s ease-out;
+  opacity: 1;
+}
+.custom-modal.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.verificationPicture {
+  /*background-color: #000000;*/
+  /*border: 1px solid #515151;*/
+}
+
+.verficationButtons {
+  padding-top: 2%;
+  float:right;
+}
+
+.mask {
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  /*font-size: 20px;*/
+  background: rgba(0, 0, 0, 0.6);
+  color: grey;
+  text-align: center;
+  position: absolute;
+  z-index: 100;
+}
+
+
+
+
+table {
+  background: #012B39;
+  /*border-radius: 0.25em;*/
+  border-collapse: collapse;
+  margin: 1em;
+  display: inline-block;
+}
+th {
+  border-bottom: 1px solid #364043;
+  color: #FF9C00;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+td {
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.80em;
+  padding: 0.65em 1em;
+}
+.disabled td {
+  color: #4F5F64;
+}
+tbody tr {
+  transition: background 0.25s ease;
+}
+tbody tr:hover {
+  background: #014055;
+}

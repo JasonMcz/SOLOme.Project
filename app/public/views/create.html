@@ -1,0 +1,121 @@
+<div class="row" ng-init="setStep('2')">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="summonerDisplay" ng-hide="!players[0].info.id">
+            <div class="col-md-5">
+                <img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/{{players[0].info.profileIconId}}.png">
+            </div>
+            <div class="col-md-7">
+                <div class="summonerName">{{players[0].info.name}}</div> | NA | {{players[0].ranked.tier}}-{{players[0].ranked.entries[0].division}}
+                <elo ng-show = "players[0].solo !== ''">SMMR: {{players[0].solo.rating}}</elo>
+                <span>Summoner ID: {{players[0].info.id}}</span>
+                <span>Summoner Level: lvl.{{players[0].info.summonerLevel}}</span>
+                <span>Last Avtive : {{players[0].info.revisionDate | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+    <!-- Create Game Button -->
+
+    <!-- Create Game Button Ends -->
+
+    <!-- Verification Status -->
+    <!-- <div class="col-md-1" ng-hide ="players[0].verified == true || !players[0].info.id ">
+        <div class="summonerDisplayFillerGreen" ng-show ="players[0].verified">
+            <i class="fa fa-check-square-o" aria-hidden="true" style="color:white;font-size:45px;margin-top:50%"></i>verified
+        </div>
+        <div class="summonerDisplayFillerRed" ng-hide ="players[0].verified">
+            <i class="fa fa-circle-o-notch fa-spin fa-fw margin-bottom" style="color:white;font-size:45px;margin-top:50%"></i>waiting..
+        </div>
+    </div> -->
+
+    <!-- <div class="col-md-1" ng-hide ="players[0].verified == true || !players[1].info.id">
+        <div class="summonerDisplayFillerGreen" ng-show="players[1].verified">
+            <i class="fa fa-check-square-o" aria-hidden="true" style="color:white;font-size:45px;margin-top:50%"></i>verified
+        </div>
+        <div class="summonerDisplayFillerRed" ng-hide="players[1].verified">
+            <i class="fa fa-circle-o-notch fa-spin fa-fw margin-bottom" style="color:white;font-size:45px;margin-top:50%"></i>waiting..
+        </div>
+    </div> -->
+
+
+    <!-- Verification Status Ends-->
+        <!-- <div class="summonerDisplay" ng-hide="!players[1].info.id">
+            <div class="col-md-7">
+                <div class="summonerName">{{players[1].info.name}}</div> | NA | {{players[1].ranked.tier}}-{{players[1].ranked.entries[0].division}}
+                <elo ng-show = "players[1].solo !== ''">SMMR: {{players[1].solo.rating}}</elo>
+                <span>Summoner ID: {{players[1].info.id}}</span>
+                <span>Summoner Level: lvl.{{players[1].info.summonerLevel}}</span>
+                <span>Last Avtive : {{players[1].info.revisionDate | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+            </div>
+            <div class="col-md-5">
+                <img ng-hide = "!players[1].info.profileIconId" src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/{{players[1].info.profileIconId}}.png">
+                <img ng-show = "!players[1].info.profileIconId" src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/22.png" style = "-webkit-filter: grayscale(100%);filter: grayscale(100%);">
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<div class="row" style = "text-align:center">
+  <div id = "addSummoner">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" style = "text-align:center">
+        <div class="summonerWrapper" style = "display:inline-block" ng-hide="players[0].verified">
+            <form class="summonerForm" ng-submit="addSummoner()">
+                <input type="text" class="form-control" placeholder="North America"></input>
+                <input type="text" ng-model = "players[0].info.name" class="form-control" placeholder="Summoner Name"></input>
+                <div class="summonerButtonWrap">
+                    <button type="submit" class="btn-large btn-large-primary" ng-click="getSummoner({'region':region1, 'name':players[0].info.name, 'tag':0})" ng-show="!players[0].info.id">Add Summoner</button>
+                    <button class="btn-large btn-large-primary" ng-click="verifySummoner({'region':region1, 'name':players[0].info.name, 'tag':0})" ng-hide="!players[0].info.id">
+                        <i class="fa fa-circle-o-notch fa-spin fa-fw margin-bottom" ng-hide="players[0].verified"></i>
+                        <i class="fa fa-check-square" aria-hidden="true" ng-show="players[0].verified"></i> Verify
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-12" style = "margin-top:25px;" ng-show="players[0].verified">
+          <!-- match me button -->
+          <button class="btn-large btn-large-primary" ng-click="match()" style="font-size:22px;width:330px" ng-show = "button == 'match'">
+            Match Me
+            <i class="fa fa-circle-o-notch fa-spin fa-fw margin-bottom"></i>
+          </button>
+          <!-- match me button ends -->
+          <button class="btn-large btn-large-primary" ng-click="createGame()" style="font-size:22px;width:330px" ng-show = "button == 'create'">
+            Create Game
+            <i class="fa fa-circle-o-notch fa-spin fa-fw margin-bottom"></i>
+          </button></p>
+          <button class="btn-large btn-large-primary" ng-click="deleteSummoner(0)" ng-hide="!players[0].info.id" style="font-size:22px;width:330px">
+            Change Summoner
+            <i class="fa fa-cog fa-spin fa-fw margin-bottom"></i>
+          </button>
+        </div>
+    </div>
+  </div>
+
+
+    <!-- <div class="col-md-2">
+        <div class="summonerVS">
+            <span>VS</span>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="summonerWrapper" style="float:right">
+            <form class="summonerForm" ng-submit="addSummoner()">
+                <input type="text" class="form-control" placeholder="North America"></input>
+                <input type="text" ng-model = "players[1].info.name" class="form-control" placeholder="Summoner Name"></input>
+                <div class="summonerButtonWrap">
+                    <button type="submit" class="btn-large btn-large-primary" ng-show="!players[1].info.id" disabled>
+                        <i class="fa fa-circle-o-notch fa-spin fa-fw margin-bottom"></i>
+                        Waiting...Player 2
+                    </button>
+                    <button class="btn-large btn-large-primary" ng-click="verifySummoner({'region':region2, 'name':players[1].info.name, 'tag':1})" ng-hide="!players[1].info.id">
+                        <i class="fa fa-circle-o-notch fa-spin fa-fw margin-bottom" ng-hide="players[1].verified"></i>
+                        <i class="fa fa-check-square" aria-hidden="true" ng-show="players[1].verified"></i> Verify
+                    </button>
+                    <button class="btn-large btn-large-primary" ng-click="deleteSummoner(1)" ng-hide="!players[1].info.id">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div> -->
+</div>

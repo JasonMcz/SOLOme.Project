@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SOLOme - Let's play solo game! League of Legends</title>
+    <!-- style sheets  -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <!-- angular cdn load -->
+    <script src="bower_components\angular\angular.js"></script>
+    <!-- angular ui bootstrap module -->
+    <link href="bower_components\angular-bootstrap\ui-bootstrap-csp.css" rel="stylesheet">
+    <!-- notification module -->
+    <link href="//cdn.jsdelivr.net/angular.ng-notify/0.6.0/ng-notify.min.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/angular.ng-notify/0.6.0/ng-notify.min.js"></script>
+    <!-- loading bar module -->
+    <link rel='stylesheet' href='/stylesheets/loading-bar.min.css' type='text/css' media='all' />
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
+    <!-- google fonts api -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Garamond">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+
+</head>
+
+<body ng-app="soloMe" ng-controller="MainCtrl" ng-cloak>
+    <div class="container topbar">
+        <div class="col-md-4">
+            Server: <span style="color:green"><i class="fa fa-circle" aria-hidden="true" style ="font-size:12px;"></i> {{status}}   </span>
+            Player: <span style = "color:green" ng-show = "players[0].verified"}}><i class="fa fa-circle" aria-hidden="true" style ="font-size:12px;"></i>verified</span>
+            <span style = "color:red" ng-hide = "players[0].verified"}}><i class="fa fa-circle" aria-hidden="true" style ="font-size:12px;"></i>not verified</span>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+
+    <div class="logo">
+        <img src="/images/solome_logo.png" width="25%">
+    </div>
+
+    <main ui-view></main ui-view>
+
+    <footer class="footer">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+
+        <div class="container" style="border-bottom:3px solid #FF9C00;width:90%">
+            <div ng-class="{'stepCurrent':currentStep == '1'}" class="col-md-4 step" ui-sref="init">
+                Step 1
+            </div>
+            <div ng-class="{'stepCurrent':currentStep == '2'}" class="col-md-4 step" ui-sref="create">
+                Step 2
+            </div>
+            <div ng-class="{'stepCurrent':currentStep == '3'}" class="col-md-4 step">
+                Step 3
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="container">
+                <div class="col-md-12">
+                    <small class="copyright">
+                        Copyright @ 2016 JZ'JasonStathan' |
+                        <a href="http://solome.io/" target="_top">SOLOme.io</a>
+                        <br>League of Legends is a registered trademark of Riot Games, Inc. This app was built for the Riot Gams<a href="https://developer.riotgames.com/api-challenge-rules"> API Challage 2016</a> .
+                      </small>
+                </div>
+            </div>
+        </div>
+
+          <div class="custom-modal" ng-show = "modal">
+            <div class="overlay">
+                <!-- <div style = "text-align:center;font-size:1.5em">Verification Helper</div> -->
+                <div>
+                  <img class = "verificationPicture" src = '/images/verification.gif' width="99%"></img>
+                  <i class="fa fa-info-circle" aria-hidden="true"></i> Instruction: To verify your summoner account, please go to your runes page and set the name of 1st runes page to solome (all lowercase).
+                  </p><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Then click [verify] button to start a game.
+                </div>
+                <!-- <a href ng-click="close()">Close</a> -->
+                <div class = "verficationButtons">
+                  <button class="btn-large btn-large-primary" ng-click="closeModal()" data-dismiss="modal">Close</button>
+                  <button class="btn-large btn-large-primary" ng-click="neverShow()" data-dismiss="modal">Don't show again</button>
+                </div>
+            </div>
+            <div class="fade"></div>
+          </div>
+
+          <!-- The modal that shows waiting -->
+          <div class="custom-modal2" ng-show = "wait">
+            <div class="overlay" style = "height:50%;text-align:center">
+              <div style = "font-size:150px;color:darkgrey;margin-top:5%;">
+                <i class="fa fa-circle-o-notch fa-spin fa-fw margin-bottom"></i><p>
+                <span style = "font-size: 45px">Getting You Matched...</span><p>
+                <!-- <span style = "font-size: 30px">Average Wait Time: 30 seconds</span> -->
+              </div>
+                <!-- <div class = "verficationButtons">
+                  <button class="btn-large btn-large-primary" ng-click="closeModal()" data-dismiss="modal">Close</button>
+                  <button class="btn-large btn-large-primary" ng-click="neverShow()" data-dismiss="modal">Don't show again</button>
+                </div> -->
+            </div>
+            <div class="fade"></div>
+          </div>
+
+
+    </footer>
+
+</body>
+
+
+<script src="/javascripts/angularApp.js"></script>
+<!-- import controllers part -->
+<script src="/javascripts/controllers/mainCtrl.js"></script>
+<!-- <script src="/javascripts/controllers/ModalInstanceController.js"></script> -->
+<!-- import services part -->
+<script src="/javascripts/services/API.js"></script>
+<!-- import factories part -->
+<script src="/javascripts/factories/factory.js"></script>
+<!-- angular modal service -->
+<script src="bower_components\angular-bootstrap\ui-bootstrap.min.js"></script>
+<script src="bower_components\angular-bootstrap\ui-bootstrap-tpls.min.js"></script>
+<!-- load momentJS (required for angular-moment) -->
+<script src="bower_components\moment\moment.js"></script>
+<script src="bower_components\angular-moment\angular-moment.min.js"></script>
+<!-- angular CDN modules import -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-cookies.min.js"></script>
+<!-- angular LocalStorageModule -->
+<script src="/javascripts/external/angular-local-storage.min.js"></script>
+<!-- angular routing -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+
+</html>

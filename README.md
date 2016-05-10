@@ -238,7 +238,7 @@ To Install:
 
 **Clone **our git and install locally
 
-Current version allows for local usage. Before running the local server, make sure to **$**** npm install** into the app folder.
+Current version allows for local usage. Before running the local server, make sure to **$ npm install** into the app folder.
 
 # Acknowledgement
 

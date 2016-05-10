@@ -60,7 +60,7 @@ Using mongoose as interface and using mongoDB for our data persistence.
 
 *Below is a database schema of our models:*
 
-![Imgur](http://i.imgur.com/8TuMEti.png)
+<a href="http://i.imgur.com/8TuMEti.png"><img src="http://i.imgur.com/8TuMEti.png" align="center" width="60%" ></a></p>
 
 
 # The States of Games
@@ -107,7 +107,8 @@ Each node in the tree is represented as follows:
 *The list is represented by a linked list queue data structure
 
 Below is an example of organisations of nodes according to mmr
-![Imgur](http://i.imgur.com/fc9ElUF.png)
+
+<a href="http://i.imgur.com/fc9ElUF.png"><img src="http://i.imgur.com/fc9ElUF.png" align="center" width="45%" ></a></p>
 
 *Note: each node represents a central value of the allowed matching bracket (i.e.: 1200 represents a bracket of min < 1200 < max within which the players actually get matched).*
 
@@ -237,11 +238,17 @@ To Install:
 **Clone **our git and install locally
 
 Current version allows for local usage. 
+
 1. $ cd projectfolder
+
 2. $ cd app
+
 3. Before running the local server, make sure to run command **$ npm install** into the app folder.
+
 4. $ cd public
+
 5. $ sudo npm install
+
 6. $ bower install (you might want to add --allow-root, if you are running sudo)
 
 

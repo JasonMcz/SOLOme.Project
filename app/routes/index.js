@@ -18,7 +18,7 @@ var dbURI = 'mongodb://localhost/solomeDB';
 // app.use('/match', MatchMaker);
 
 // create ENV variables for all API calls
-var api_key = "753c0e9e-df6c-4206-94fb-ee1309467e7d";
+var api_key = "********-*******-******-****";
 var host = "https://na.api.pvp.net/api/lol/";
 
 

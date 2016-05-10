@@ -254,7 +254,7 @@ Current version allows for local usage.
 
 # Acknowledgement
 
-**Team**: @[JZ](https://www.linkedin.com/in/joeczhou) 'JasonStathan' @Anik657 ‘KerberoLas’
+**Team**: @[JZ](https://www.linkedin.com/in/joeczhou) 'JasonStathan' @Anik657 ‘KerberosLas’
 
 Special Thanks to @Chris 'StopTV' who provided us ideas on calculating MMRs and match making. @[Thinkster](https://thinkster.io/mean-stack-tutorial#wiring-everything-up).io providing such an awesome tutorial for getting us to speed so quickly on MEAN stack 
 

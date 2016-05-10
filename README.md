@@ -1,13 +1,34 @@
 # SOLOme.Project
+
+![Imgur](http://i.imgur.com/7sb8ucd.png)
+
 “Bring the Solo fun back to League of Legends”
+
 
 **Background**
 
 As a 5-year LOL veteran, I've witnessed how game dynamic has changed over the years and how its focus has shifted more and more towards the teamwork aspect of the game. In the current meta, one good team fight with a 3-4 men push can easily yield a victory before the early game phase even ends. Just seeing all my older league friends slowly departing this game because of this shift and also my love for playing solo games made me take on this project for this year’s API challenge.
 
+![Imgur](http://i.imgur.com/q4u8Rg3.png=150x80)
+![Imgur](http://i.imgur.com/osSSdFp.png=150x80)
+
+
+
 **Introduction**
 
 SOLOme is a web based platform that allows fellow LOLers to enjoy the solo (skills) aspect of the game, whether they are challenging friends for a duo or getting matched with someone in the community, and at the same time allows them to track their solo track record. 
+
+
+**Demo**
+ 
+**[Create Game Room]**
+
+(http://recordit.co/ocO40ds316)
+
+**[Match with A Player]**
+
+(http://recordit.co/QJDxNSS75p)
+
 
 **Use Case**
 
@@ -19,21 +40,11 @@ SOLOme is a web based platform that allows fellow LOLers to enjoy the solo (skil
 
 **How it works**
 
- 
-
-**Demo**
-
-**[Create Game Room]**
-
-**[http://recordit.co/ocO40ds31**6](http://recordit.co/ocO40ds316)
-
-**[Match with A Player]**
-
-** ****[http://recordit.co/QJDxNSS75**p](http://recordit.co/QJDxNSS75p)
+![Imgur](http://i.imgur.com/cYzqNu5.jpg)
 
 **Our Design**
 
-**	**Software stack: [MEAN](http://mean.io/) (Mongo, Express, Angular, Node.js).
+	Software stack: [MEAN](http://mean.io/) (Mongo, Express, Angular, Node.js).
 
 	Server End: [Node.js](https://nodejs.org/), [Express](http://expressjs.com/).
 
@@ -49,15 +60,21 @@ SOLOme is a web based platform that allows fellow LOLers to enjoy the solo (skil
 
 Using mongoose as interface and using mongoDB for our data persistence. 
 
-*Below is a schema of our models:*
+*Below is a database schema of our models:*
+
+![Imgur](http://i.imgur.com/8TuMEti.png)
+
 
 **The States of Games**
 
 By using multiple API calls against League Server to achieve the shifting between the status of games. Using [Agenda](https://github.com/rschmukler/agenda) - a light-weight job scheduling library for Node.js, system is able to concurrently schedule jobs to facilitate the checking and status setting/updating against the mongo database.
 
+![Imgur](http://i.imgur.com/O09GnPe.jpg)
+
+
 **The Game Room**
 
-The gameroom function is designed to allow players to create a open game room that's available to share via a link in the format of *[http://solome.lol/#games/123zxc9234*k](http://solome.lol/#games/123zxc9234k)* *
+The gameroom function is designed to allow players to create a open game room that's available to share via a link in the format of [http://solome.lol/#games/123zxc9234k]
 
 The other person who receives the link will be able join the game room. After both participants join the game room, scheduled job with the Node will update data in the [Games_db] from the backend, where the job runs on an designated interval to check against Riot current_game endpoint for game info.
 
@@ -92,6 +109,7 @@ Each node in the tree is represented as follows:
 *The list is represented by a linked list queue data structure
 
 Below is an example of organisations of nodes according to mmr
+![Imgur](http://i.imgur.com/fc9ElUF.png)
 
 *Note: each node represents a central value of the allowed matching bracket (i.e.: 1200 represents a bracket of min < 1200 < max within which the players actually get matched).*
 
@@ -107,15 +125,15 @@ In the future, the structure could be marginally improved to handle large volume
 
 * Winning/losing a solo match can affect your score in the range of [1,39] or [-39,-1] based on the difference between players mmrs.
 
-var calcMMR = function(MMR1, MMR2) {
+   var calcMMR = function(MMR1, MMR2) {
 
     var adjustment = (Number(MMR1) - Number(MMR2)) / 20;
 
     var s1 = 20 - Math.min(Math.max(adjustment, -19), 20);
 
     return [adjustment, s1]
-
-};
+    
+   };
 
 ** API Design**
 

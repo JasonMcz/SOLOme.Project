@@ -5,7 +5,7 @@
 “Bring the Solo fun back to League of Legends”
 
 
-**Background**
+# Background
 
 As a 5-year LOL veteran, I've witnessed how game dynamic has changed over the years and how its focus has shifted more and more towards the teamwork aspect of the game. In the current meta, one good team fight with a 3-4 men push can easily yield a victory before the early game phase even ends. Just seeing all my older league friends slowly departing this game because of this shift and also my love for playing solo games made me take on this project for this year’s API challenge.
 
@@ -14,12 +14,12 @@ As a 5-year LOL veteran, I've witnessed how game dynamic has changed over the ye
 
 
 
-**Introduction**
+# Introduction
 
 SOLOme is a web based platform that allows fellow LOLers to enjoy the solo (skills) aspect of the game, whether they are challenging friends for a duo or getting matched with someone in the community, and at the same time allows them to track their solo track record. 
 
 
-**Demo**
+# Demo
  
 **[Create Game Room]**
 
@@ -30,7 +30,7 @@ SOLOme is a web based platform that allows fellow LOLers to enjoy the solo (skil
 (http://recordit.co/QJDxNSS75p)
 
 
-**Use Case**
+# Use Case
 
 1. Summoner JasonStathan just played a blind normal game (5v5) mirror laning against enemy Zed and he thinks the opponent was pretty damn good at Zed. As a fellow Zed lover, he had sent the enemy Zed a friend request afterwards. Jason created a 1v1 game room on SoloMe platform and sent the invitation link via game chat. They started a solo game afterwards and SOLOme platform tracked that solo game's performance including who scored [first blood] or [first turret], and also the platform will track the [total win]/[total lose] for giving each player a referencing MMR.
 
@@ -38,11 +38,11 @@ SOLOme is a web based platform that allows fellow LOLers to enjoy the solo (skil
 
 3. Just for fun! Do whatever you like in a solo game! Maybe create a tournament in your school?
 
-**How it works**
+# How it works
 
 ![Imgur](http://i.imgur.com/cYzqNu5.jpg)
 
-**Our Design**
+# Our Design
 
 	Software stack: [MEAN](http://mean.io/) (Mongo, Express, Angular, Node.js).
 
@@ -65,20 +65,20 @@ Using mongoose as interface and using mongoDB for our data persistence.
 ![Imgur](http://i.imgur.com/8TuMEti.png)
 
 
-**The States of Games**
+# The States of Games
 
 By using multiple API calls against League Server to achieve the shifting between the status of games. Using [Agenda](https://github.com/rschmukler/agenda) - a light-weight job scheduling library for Node.js, system is able to concurrently schedule jobs to facilitate the checking and status setting/updating against the mongo database.
 
 ![Imgur](http://i.imgur.com/O09GnPe.jpg)
 
 
-**The Game Room**
+# The Game Room
 
 The gameroom function is designed to allow players to create a open game room that's available to share via a link in the format of [http://solome.lol/#games/123zxc9234k]
 
 The other person who receives the link will be able join the game room. After both participants join the game room, scheduled job with the Node will update data in the [Games_db] from the backend, where the job runs on an designated interval to check against Riot current_game endpoint for game info.
 
-**The Matchmaker**
+# The Matchmaker
 
 The matchmaker function is designed to match available people for 1v1 games according to their MMR rating calculated internally.
 
@@ -117,7 +117,7 @@ As of now, since we do not need to search for a specific summoner who is in the 
 
 In the future, the structure could be marginally improved to handle large volumes of users by implementing rebalancing feature that makes sure that the search complexity is O(log(n)).
 
-**The MMRs**
+# The MMRs
 
 * Goal is to allow users to be ranked along a normDist curve where top players have to win significantly more to be ranked higher
 
@@ -135,7 +135,7 @@ In the future, the structure could be marginally improved to handle large volume
     
    };
 
-** API Design**
+# API Design
 
 'Functions by users'
 
@@ -224,7 +224,7 @@ The actions map directly to several routes, which are described as follows:
 </table>
 
 
-**Deployment**
+# Deployment
 
 Requirements:
 
@@ -240,7 +240,7 @@ To Install:
 
 Current version allows for local usage. Before running the local server, make sure to **$**** npm install** into the app folder.
 
-**Acknowledgement**
+# Acknowledgement
 
 **Team**: @[JZ](https://www.linkedin.com/in/joeczhou) 'JasonStathan' @Anik657 ‘KerberoLas’
 

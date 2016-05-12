@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var dbURI = 'mongodb://localhost/solomeDB';
+var dbURI = 'mongodb://Anik657:solome@ec2-54-152-247-43.compute-1.amazonaws.com:27017/solomeDB';
 
 var mongoose = require('mongoose');
 require('./models/Mmr');

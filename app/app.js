@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var dbURI = 'mongodb://Anik657:solome@ec2-54-152-247-43.compute-1.amazonaws.com:27017/solomeDB';
+var port = process.env.PORT || 8080;
+
 
 var mongoose = require('mongoose');
 require('./models/Mmr');
@@ -91,5 +93,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(port);
 
 module.exports = app;

@@ -6,7 +6,7 @@ var https = require('https');
 var bodyParser = require('body-parser');
 var Client = require('node-rest-client').Client;
 var client = new Client();
-
+var port = process.env.PORT || 8080;
 // var MatchMaker = require('../anxiliary/MatchMaking/MatchMaker.js');
 
 var mongoose = require('mongoose');
@@ -861,5 +861,7 @@ router.get('/two', function(req, res, next) {
     //       res.send(result);
     //   });
 });
+
+app.listen(port);
 
 module.exports = router;

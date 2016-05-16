@@ -19,6 +19,9 @@ SOLOme is a web based platform that allows fellow LOLers to enjoy the solo (skil
 
 # Demo
  
+**[Our DEMO site]**
+(http://www.solome.lol/)
+
 **[Create Game Room]**
 
 (http://recordit.co/ocO40ds316)

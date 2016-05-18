@@ -66,6 +66,12 @@ Using mongoose as interface and using mongoDB for our data persistence.
 
 <a href="http://i.imgur.com/8TuMEti.png"><img src="http://i.imgur.com/8TuMEti.png" align="center" width="60%" ></a></p>
 
+# User Verfication Process
+
+We are using user's runes page to achieve the verification process currently, for this version, user just need to change the 1st runes page to solome, then they are verified for being the owner of the summoner otherwise they won't be able to create or match with a game.
+
+Future version, we envisioning connecting user with their email address then do a 2FA process, by sending them randomly generated code from server in which case needed to be entered from the front-end in order to complete the process.
+
 
 # The States of Games
 
